@@ -24,9 +24,8 @@ using Xamarin.Forms;
             {
                 var scanner = new ZXing.Mobile.MobileBarcodeScanner();
                 scanner.TopText = "Lectura de QR";
-                scanner.BottomText = "Please Wait";
-                var result = await scanner.Scan();
-                return result.Text;
+                var qr_result = await scanner.Scan();
+                return qr_result.Text;
                 /*if (result != null) 
                 {
                     txtResultado.Text = result.Text;
