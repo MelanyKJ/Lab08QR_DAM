@@ -10,7 +10,7 @@ using ZXing.Net.Mobile.Forms;
 
 namespace DAM_Lab07
 {
-        public partial class MainPage : ContentPage
+    public partial class MainPage : ContentPage
     {
         public MainPage()
         {
