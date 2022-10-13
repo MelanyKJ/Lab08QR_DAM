@@ -10,27 +10,22 @@ using ZXing.Net.Mobile.Forms;
 
 namespace DAM_Lab07
 {
-    public partial class MainPage : ContentPage
+        public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
         }
-
-
         private async void BtnScannerQR_Clicked(object sender, EventArgs e)
         {
-            try
-            {
+            try{
                 var scanner = DependencyService.Get<IQRScannerService>();
-                var result = await scanner.QRScannerRead();
+                var qr_result = await scanner.QRScannerRead();
 
-                if(result != null)
-                {
-                    txtResultado.Text = result;
+                if(qr_result != null){
+                    txtResultado.Text = qr_result;
                 }
-            }catch(Exception ex)
-            {
+            }catch(Exception ex){
                 txtResultado.Text=ex.Message;
             }
         }
