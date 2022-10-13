@@ -5,7 +5,6 @@
 
     <StackLayout Padding="12">
         <Label Text="Codigo QR" HorizontalOptions="Center" VerticalOptions="Center" FontSize="Large" Padding="20"></Label>
-
         <Button x:Name="btnScannerQR" Text="Escanear QR" Clicked="BtnScannerQR_Clicked" BackgroundColor="SkyBlue"></Button>
         <Entry x:Name="txtResultado" Placeholder="Mostrar QR" AnchorY="10"/>
     </StackLayout>
